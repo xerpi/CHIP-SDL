@@ -12,12 +12,12 @@ SDL_Surface *CreateSurface(Uint32 flags, int w, int h, const SDL_Surface* disp);
 int main(int argc, char *argv[])
 {
     if (argc < 2) {
-        printf("Usage: ./CHIP-3DS rom\n");
+        printf("Usage: ./CHIP-SDL rom\n");
         return -1;
     }
 
     srand(time(NULL));
-    printf("Chip-3DS by xerpi\n");
+    printf("Chip-SDL by xerpi\n");
     printf("Loading \"%s\"...", argv[1]);
     struct chip8_context chip8;
     chip8_init(&chip8, 64, 32);
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     printf("Running \"%s\"...\n", argv[1]);
     
     SDL_Init(SDL_INIT_VIDEO);
-    SDL_Window *window = SDL_CreateWindow("Chip-3DS",
+    SDL_Window *window = SDL_CreateWindow("Chip-SDL",
        SDL_WINDOWPOS_CENTERED,
        SDL_WINDOWPOS_CENTERED,
        640,
