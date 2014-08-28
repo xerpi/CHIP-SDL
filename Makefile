@@ -1,4 +1,4 @@
-TARGET = CHIP-3DS
+TARGET = CHIP-SDL
 OBJS = main.o utils.o chip-8.o
 
 CC = gcc
